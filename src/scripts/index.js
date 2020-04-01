@@ -12,7 +12,7 @@ const controlSearch = async () =>{
     console.log(query);
 
 
-    if(query != undefined || null || ' ')
+    if(query !== undefined || null || ' ')
     {
         state.search = new Search.Search(query);
         //Prepare UI for results
@@ -32,8 +32,8 @@ const controlSearch = async () =>{
     else{
         searchView.clearResults();
 
-        await state.topSearch.TopHeadings();
-        searchView.renderResults(state.topSearch.topresults);
+        await state.search.TopHeadings();
+        searchView.renderResults(state.search.results);
 
     }
    
@@ -50,12 +50,11 @@ const controlSearch = async () =>{
 const topNews = async() => {
     renderLoader(elements.searchResList);
 
-state.topSearch = new Search.TopNews();
-await state.topSearch.TopHeadings();
-console.log(state.topSearch.topresults);
+state.search = new Search.TopNews();
+    await state.search.TopHeadings();
     clearLoader();
-searchView.renderResults(state.topSearch.topresults);
-console.log(state.topSearch.topresults);
+    searchView.renderResults(state.search.results);
+    console.log(state.search.results);
 };
 topNews();
 
@@ -67,6 +66,8 @@ elements.searchPagesBtn.addEventListener('click', e =>{
      const gotoPage = parseInt(btn.dataset.goto , 10);
      searchView.clearResults();
      searchView.clearButton();
+    
+   
      searchView.renderResults(state.search.results , gotoPage);
      }
 });
