@@ -81,9 +81,10 @@ section .article-description {
 
 section .article-author {
   width: 100%;
-  position: relative;
-  right: 0px;
   color: #03DAC5;
+  text-align: right;
+  position: relative;
+  bottom: 0px;
 }
 
 @media (max-width: 425px) {
