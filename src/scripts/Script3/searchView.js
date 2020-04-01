@@ -12,9 +12,7 @@ const renderNews = news => {
     const markup = `
     <li class="article">
     <a class="article-link" href="${news.url}">
-     <span ">
-        <img class="article-img" src="${news.urlToImage}">
-     </span>
+     <img class="article-img" src="${news.urlToImage}">
      <h2 class="article-title">${reduceString(news.title)}</h2>
      <p class="article-description">${reduceString(news.description)}</p>
      <span class="article-author"> - ${reduceAuthor(news.author)}</span>
