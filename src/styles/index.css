@@ -83,6 +83,7 @@ section .article-author {
   width: 100%;
   position: relative;
   right: 0px;
+  color: #03DAC5;
 }
 
 @media (max-width: 425px) {
