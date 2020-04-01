@@ -17,7 +17,7 @@ const renderNews = news => {
      </span>
      <h2 class="article-title">${reduceString(news.title)}</h2>
      <p class="article-description">${reduceString(news.description)}</p>
-     <span class="article-author"> ${reduceAuthor(news.author)}</span>
+     <span class="article-author"> - ${reduceAuthor(news.author)}</span>
     </a>
   </li>
     
