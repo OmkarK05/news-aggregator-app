@@ -31,7 +31,7 @@ const controlSearch = async () =>{
     }
     else{
         searchView.clearResults();
-
+        
         await state.search.TopHeadings();
         searchView.renderResults(state.search.results);
 

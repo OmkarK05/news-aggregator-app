@@ -65,7 +65,7 @@ const reduceString = (str, len = 42) => {
           return(str);
 };
 
-export const renderResults = (newsData, page = 1, newsPerPage = 10) => {
+export const renderResults = (newsData, page = 1, newsPerPage = 20) => {
 
      if(newsData.length === 0)
      {
@@ -76,14 +76,15 @@ export const renderResults = (newsData, page = 1, newsPerPage = 10) => {
     const start = (page - 1) * (newsPerPage);
     const end = page * newsPerPage ;
     console.log(newsData);
-    if(newsData.length > 10)
-    {
-    renderButtons(page, newsData.length, newsPerPage);
-    newsData.slice(start, end).forEach(renderNews);
-    }
-    else{
-      newsData.forEach(renderNews);
-    }
+    newsData.forEach(renderNews);
+    // // if(newsData.length > 10)
+    // // {
+    // // renderButtons(page, newsData.length, newsPerPage);
+    // // newsData.slice(start, end).forEach(renderNews);
+    // // }
+    // // else{
+    //   newsData.forEach(renderNews);
+    // }
 };
 
 const createButton = (page, type) =>
