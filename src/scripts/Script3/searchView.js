@@ -10,14 +10,14 @@ export const clearButton = () => elements.searchPagesBtn.innerHTML = ' ';
 const renderNews = news => {
          console.log(news);
     const markup = `
-    <li>
+    <li class="article">
     <a class="article-link" href="${news.url}">
      <span ">
         <img class="article-img" src="${news.urlToImage}">
      </span>
      <h2 class="article-title">${reduceString(news.title)}</h2>
      <p class="article-description">${reduceString(news.description)}</p>
-     <div id="author"><span class="article-author">-${reduceAuthor(news.author)}</span><div>
+     <div id="author"><span class="article-author">- ${reduceAuthor(news.author)}</span><div>
     </a>
   </li>
     
