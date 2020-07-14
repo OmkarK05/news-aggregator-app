@@ -76,7 +76,7 @@ const createButton = (page, type) =>
 <button class="arrowContainer" data-goto=${
     type === "next" ? page + 1 : page - 1
   }>
- <span><img class="Page${type}" src="public/public/arrow_${type}_white.png" alt="forward" width="75px"></span>  
+ <span><img class="Page${type}" src="public/arrow_${type}_white.png" alt="forward" width="75px"></span>  
 </button>`;
 
 const renderButtons = (page, numNews, newsPerPage) => {
